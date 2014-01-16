@@ -34,7 +34,7 @@ class TrilinosLibcpp < Formula
     # args << "-DZoltan_ENABLE_ULLONG_IDS:Bool=ON"
 
     args << "-DCMAKE_CXX_FLAGS:STRING='-stdlib=libc++'"
-    args << "-D Trilinos_ENABLE_Fortran:BOOL=OFF"
+    args << "-DTrilinos_ENABLE_Fortran:BOOL=OFF"
     args << "-DTrilinos_ENABLE_Epetra:BOOL=ON"
     args << "-DTrilinos_ENABLE_Teuchos:BOOL=ON"
     args << "-DTrilinos_ENABLE_AztecOO:BOOL=ON"
