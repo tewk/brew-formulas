@@ -1,6 +1,6 @@
 require 'formula'
 
-class Trilinos < Formula
+class TrilinosLibcpp < Formula
   homepage 'http://trilinos.sandia.gov'
   url 'http://trilinos.sandia.gov/download/files/trilinos-11.4.3-Source.tar.gz'
   sha1 'ea0c09841ec9c1ceb7ea54c384255e34bc60225b'
