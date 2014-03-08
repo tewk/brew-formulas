@@ -164,7 +164,9 @@ __END__
 -
 -testmat:
 -	(cd MATGEN; $(MAKE))
-+all: single double complex complex16
++testmat:
++	(cd MATGEN; $(MAKE))
++all: testmat single double complex complex16
  
  single: ./stest stest.out
  
