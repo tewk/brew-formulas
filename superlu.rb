@@ -156,20 +156,6 @@ __END__
  
  ALINTST = sp_ienv.o
  
-@@ -45,10 +49,7 @@
- 
- ZLINTST = zdrive.o sp_zconvert.o zgst01.o zgst02.o zgst04.o zgst07.o
- 
--all: testmat single double complex complex16
--
--testmat:
--	(cd MATGEN; $(MAKE))
-+testmat:
-+	(cd MATGEN; $(MAKE))
-+all: testmat single double complex complex16
- 
- single: ./stest stest.out
- 
 --- a/TESTING/MATGEN/slatb4.c
 +++ b/TESTING/MATGEN/slatb4.c
 @@ -4,7 +4,15 @@
