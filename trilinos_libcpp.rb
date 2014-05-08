@@ -39,6 +39,7 @@ class TrilinosLibcpp < Formula
     args << "-DTrilinos_ENABLE_Teuchos:BOOL=ON"
     args << "-DTrilinos_ENABLE_AztecOO:BOOL=ON"
     args << "-DTrilinos_ENABLE_Amesos:BOOL=ON"
+    args << "-DTrilinos_ENABLE_Anasazi:BOOL=ON"
     args << "-DTrilinos_ENABLE_SuperLU:BOOL=ON"
     args << "-DTPL_ENABLE_MPI:BOOL=ON"
     args << "-DMPI_USE_COMPILER_WRAPPERS:BOOL=OFF"
