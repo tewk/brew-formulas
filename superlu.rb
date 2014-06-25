@@ -63,7 +63,7 @@ class Superlu < Formula
     args = %W[ -dynamiclib
                -all_load
                -headerpad_max_install_names
-               -install_name \"#{lib}/lib#{name}.#{version}.dylib\"
+               -install_name #{lib}/lib#{name}.#{version}.dylib
                -compatibility_version #{major}
                -current_version #{version}
                -o lib#{name}.#{version}.dylib ] + objs + deps
