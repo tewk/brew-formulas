@@ -2,10 +2,8 @@ require 'formula'
 
 class TrilinosLibcpp < Formula
   homepage 'http://trilinos.sandia.gov'
-  url 'http://trilinos.sandia.gov/download/files/trilinos-11.10.2-Source.tar.gz'
-  sha1 'f7442cef35c4dea4f3535e0859deda88f68e72fc'
-  #url 'http://trilinos.sandia.gov/download/files/trilinos-11.4.3-Source.tar.gz'
-  #sha1 'ea0c09841ec9c1ceb7ea54c384255e34bc60225b'
+  url 'http://trilinos.sandia.gov/download/files/trilinos-11.4.3-Source.tar.gz'
+  sha1 'ea0c09841ec9c1ceb7ea54c384255e34bc60225b'
 
   option "with-boost",    "Enable Boost support"
   # We have build failures with scotch. Help us on this, if you can!
@@ -13,6 +11,8 @@ class TrilinosLibcpp < Formula
   option "with-netcdf",   "Enable Netcdf support"
   option "with-teko",     "Enable 'Teko' secondary-stable package"
   option "with-shylu",    "Enable 'ShyLU' experimental package"
+  option 'with-minsizerel', 'Enable minimal size release build'
+  option 'with-release-debug', 'Enable release with debug build'
 
   depends_on :mpi => [:cc, :cxx]
   depends_on 'cmake' => :build
@@ -60,6 +60,15 @@ class TrilinosLibcpp < Formula
     args << "-DTPL_ENABLE_Boost:BOOL=ON"    if build.with? 'boost'
     args << "-DTPL_ENABLE_Scotch:BOOL=ON"   if build.with? 'scotch'
     args << "-DTPL_ENABLE_Netcdf:BOOL=ON"   if build.with? 'netcdf'
+
+
+    if build.with? 'debug'
+	    args << '-DCMAKE_BUILD_TYPE=Debug'
+    elsif build.with? 'release-debug'
+	    args << '-DCMAKE_BUILD_TYPE=RelWithDebInfo'
+    elsif build.with? 'minsizerel'
+	    args << '-DCMAKE_BUILD_TYPE=MinSizeRel'
+    end
 
     mkdir 'build' do
       system "cmake", "..", *args
