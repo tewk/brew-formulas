@@ -2,8 +2,10 @@ require 'formula'
 
 class TrilinosLibstdcpp < Formula
   homepage 'http://trilinos.sandia.gov'
-  url 'http://trilinos.sandia.gov/download/files/trilinos-11.4.3-Source.tar.gz'
-  sha1 'ea0c09841ec9c1ceb7ea54c384255e34bc60225b'
+  url 'http://trilinos.sandia.gov/download/files/trilinos-11.10.2-Source.tar.gz'
+  sha1 'f7442cef35c4dea4f3535e0859deda88f68e72fc'
+  #url 'http://trilinos.sandia.gov/download/files/trilinos-11.4.3-Source.tar.gz'
+  #sha1 'ea0c09841ec9c1ceb7ea54c384255e34bc60225b'
 
   option "with-boost",    "Enable Boost support"
   # We have build failures with scotch. Help us on this, if you can!
