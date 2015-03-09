@@ -2,8 +2,10 @@ require 'formula'
 
 class TrilinosLibcpp < Formula
   homepage 'http://trilinos.sandia.gov'
-  url 'http://trilinos.org/oldsite/download/files/trilinos-11.12.1-Source.tar.gz'
-  sha1 '84cd7f4fba7946e3d391f03d52902954bb4dcd60'
+  url 'http://trilinos.org/oldsite/download/files/trilinos-11.14.1-Source.tar.gz'
+  sha1 '84c7633e387e54c80e037998590b22d3bc71f32b'
+  #url 'http://trilinos.org/oldsite/download/files/trilinos-11.12.1-Source.tar.gz'
+  #sha1 '84cd7f4fba7946e3d391f03d52902954bb4dcd60'
   #url 'http://trilinos.sandia.gov/download/files/trilinos-11.10.2-Source.tar.gz'
   #sha1 'f7442cef35c4dea4f3535e0859deda88f68e72fc'
   #url 'http://trilinos.sandia.gov/download/files/trilinos-11.4.3-Source.tar.gz'
@@ -47,6 +49,9 @@ class TrilinosLibcpp < Formula
     args << "-DTrilinos_ENABLE_Amesos:BOOL=ON"
     args << "-DTrilinos_ENABLE_Anasazi:BOOL=ON"
     args << "-DTrilinos_ENABLE_SuperLU:BOOL=ON"
+    args << "-DTrilinos_ENABLE_Belos:BOOL=ON"
+    args << "-DTrilinos_ENABLE_Tpetra:BOOL=ON"
+    args << "-DTrilinos_ENABLE_Kokkos:BOOL=ON"
     args << "-DTPL_ENABLE_MPI:BOOL=ON"
     args << "-DMPI_USE_COMPILER_WRAPPERS:BOOL=OFF"
     args << "-DTPL_SuperLU_INCLUDE_DIRS:STRING=/usr/local/Cellar/superlu/4.3/include/superlu"
