@@ -19,6 +19,7 @@ class TrilinosLibcpp < Formula
   option "with-shylu",    "Enable 'ShyLU' experimental package"
   option 'with-minsizerel', 'Enable minimal size release build'
   option 'with-release-debug', 'Enable release with debug build'
+  option 'with-debug', 'Enable debug build'
 
   depends_on :mpi => [:cc, :cxx]
   depends_on 'cmake' => :build
