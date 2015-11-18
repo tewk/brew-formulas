@@ -57,12 +57,12 @@ class TrilinosLibcpp < Formula
     args << "-DTrilinos_ENABLE_Kokkos:BOOL=ON"
     args << "-DTPL_ENABLE_MPI:BOOL=ON"
     args << "-DMPI_USE_COMPILER_WRAPPERS:BOOL=OFF"
-    args << "-DTPL_SuperLU_INCLUDE_DIRS:STRING=/usr/local/Cellar/superlu/5.0/include/superlu"
-    args << "-DTPL_SuperLU_LIBRARY_DIRS:STRING=/usr/local/Cellar/superlu/5.0/lib"
-    args << "-DTPL_SuperLU_LIBRARIES:STRING=/usr/local/Cellar/superlu/5.0/lib/libsuperlu.a"
-    args << "-DSuperLU_LIBRARY_NAMES:STRING=superlu.5.0"
+    args << "-DTPL_SuperLU_INCLUDE_DIRS:STRING=/usr/local/Cellar/superlu/4.3/include/superlu"
+    args << "-DTPL_SuperLU_LIBRARY_DIRS:STRING=/usr/local/Cellar/superlu/4.3/lib"
+    args << "-DTPL_SuperLU_LIBRARIES:STRING=/usr/local/Cellar/superlu/4.3/lib/libsuperlu.a"
+    args << "-DSuperLU_LIBRARY_NAMES:STRING=superlu.4.3"
     args << "-DTPL_ENABLE_SuperLU:BOOL=ON"
-    args << "-DSuperLU_INCLUDE_DIRS:STRING=/usr/local/Cellar/superlu/5.0/"
+    args << "-DSuperLU_INCLUDE_DIRS:STRING=/usr/local/Cellar/superlu/4.3/"
 
     # Extra non-default packages
     args << "-DTrilinos_ENABLE_ShyLU:BOOL=ON"  if build.with? 'shylu'
