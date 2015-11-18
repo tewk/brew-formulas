@@ -2,8 +2,10 @@ require 'formula'
 
 class TrilinosLibcpp < Formula
   homepage 'http://trilinos.sandia.gov'
-  url 'http://trilinos.org/oldsite/download/files/trilinos-11.14.1-Source.tar.gz'
-  sha1 '84c7633e387e54c80e037998590b22d3bc71f32b'
+  url 'http://trilinos.csbsju.edu/download/files/trilinos-12.4.2-Source.tar.gz'
+  sha1 '6c9caafa22f8181f3a12e7074598d6307677c8fd'
+  #url 'http://trilinos.org/oldsite/download/files/trilinos-11.14.1-Source.tar.gz'
+  #sha1 '84c7633e387e54c80e037998590b22d3bc71f32b'
   #url 'http://trilinos.org/oldsite/download/files/trilinos-11.12.1-Source.tar.gz'
   #sha1 '84cd7f4fba7946e3d391f03d52902954bb4dcd60'
   #url 'http://trilinos.sandia.gov/download/files/trilinos-11.10.2-Source.tar.gz'
@@ -55,12 +57,12 @@ class TrilinosLibcpp < Formula
     args << "-DTrilinos_ENABLE_Kokkos:BOOL=ON"
     args << "-DTPL_ENABLE_MPI:BOOL=ON"
     args << "-DMPI_USE_COMPILER_WRAPPERS:BOOL=OFF"
-    args << "-DTPL_SuperLU_INCLUDE_DIRS:STRING=/usr/local/Cellar/superlu/4.3/include/superlu"
-    args << "-DTPL_SuperLU_LIBRARY_DIRS:STRING=/usr/local/Cellar/superlu/4.3/lib"
-    args << "-DTPL_SuperLU_LIBRARIES:STRING=/usr/local/Cellar/superlu/4.3/lib/libsuperlu.a"
-    args << "-DSuperLU_LIBRARY_NAMES:STRING=superlu.4.3"
+    args << "-DTPL_SuperLU_INCLUDE_DIRS:STRING=/usr/local/Cellar/superlu/5.0/include/superlu"
+    args << "-DTPL_SuperLU_LIBRARY_DIRS:STRING=/usr/local/Cellar/superlu/5.0/lib"
+    args << "-DTPL_SuperLU_LIBRARIES:STRING=/usr/local/Cellar/superlu/5.0/lib/libsuperlu.a"
+    args << "-DSuperLU_LIBRARY_NAMES:STRING=superlu.5.0"
     args << "-DTPL_ENABLE_SuperLU:BOOL=ON"
-    args << "-DSuperLU_INCLUDE_DIRS:STRING=/usr/local/Cellar/superlu/4.3/"
+    args << "-DSuperLU_INCLUDE_DIRS:STRING=/usr/local/Cellar/superlu/5.0/"
 
     # Extra non-default packages
     args << "-DTrilinos_ENABLE_ShyLU:BOOL=ON"  if build.with? 'shylu'
