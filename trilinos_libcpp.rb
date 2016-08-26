@@ -2,8 +2,10 @@ require 'formula'
 
 class TrilinosLibcpp < Formula
   homepage 'http://trilinos.sandia.gov'
-  url 'http://trilinos.csbsju.edu/download/files/trilinos-12.4.2-Source.tar.gz'
-  sha1 '6c9caafa22f8181f3a12e7074598d6307677c8fd'
+  url "https://trilinos.org/oldsite/download/files/trilinos-12.6.4-Source.tar.gz"
+  sha1 'b204a0b722ef13d7a8d18df850396199aa4feceb'
+  #url 'http://trilinos.csbsju.edu/download/files/trilinos-12.4.2-Source.tar.gz'
+  #sha1 '6c9caafa22f8181f3a12e7074598d6307677c8fd'
   #url 'http://trilinos.org/oldsite/download/files/trilinos-11.14.1-Source.tar.gz'
   #sha1 '84c7633e387e54c80e037998590b22d3bc71f32b'
   #url 'http://trilinos.org/oldsite/download/files/trilinos-11.12.1-Source.tar.gz'
