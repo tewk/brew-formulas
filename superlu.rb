@@ -4,9 +4,17 @@ require 'formula'
 class Superlu < Formula
   homepage 'http://crd-legacy.lbl.gov/~xiaoye/SuperLU/'
   url 'http://crd-legacy.lbl.gov/~xiaoye/SuperLU/superlu_4.3.tar.gz'
-  sha1 'd2863610d8c545d250ffd020b8e74dc667d7cbdd'
+  sha256 '169920322eb9b9c6a334674231479d04df72440257c17870aaa0139d74416781'
 
   depends_on 'suite-sparse'
+
+  bottle do
+	  root_url "http://igagit.byu.edu"
+	  prefix "/opt/homebrew"
+	  cellar "/opt/homebrew/Cellar"
+	  rebuild 4
+	  #sha256 "" => :yosemite
+  end
 
   def patches
     # patch the examples to compile on Mac OS X after installation
