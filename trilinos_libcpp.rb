@@ -2,18 +2,8 @@ require 'formula'
 
 class TrilinosLibcpp < Formula
   homepage 'http://trilinos.sandia.gov'
-  url "https://trilinos.org/oldsite/download/files/trilinos-12.6.4-Source.tar.gz"
-  sha256 '8c873e2d56f61ebfe3ca76185e8a25bd7f7b5cf9250b4c30a271736e0b1df1f2'
-  #url 'http://trilinos.csbsju.edu/download/files/trilinos-12.4.2-Source.tar.gz'
-  #sha1 '6c9caafa22f8181f3a12e7074598d6307677c8fd'
-  #url 'http://trilinos.org/oldsite/download/files/trilinos-11.14.1-Source.tar.gz'
-  #sha1 '84c7633e387e54c80e037998590b22d3bc71f32b'
-  #url 'http://trilinos.org/oldsite/download/files/trilinos-11.12.1-Source.tar.gz'
-  #sha1 '84cd7f4fba7946e3d391f03d52902954bb4dcd60'
-  #url 'http://trilinos.sandia.gov/download/files/trilinos-11.10.2-Source.tar.gz'
-  #sha1 'f7442cef35c4dea4f3535e0859deda88f68e72fc'
-  #url 'http://trilinos.sandia.gov/download/files/trilinos-11.4.3-Source.tar.gz'
-  #sha1 'ea0c09841ec9c1ceb7ea54c384255e34bc60225b'
+  url "https://trilinos.org/oldsite/download/files/trilinos-12.8.1-Source.tar.gz"
+  sha256 'be1aa913829dee7f688bc7ddaa370be3df974576344ae6329380b4adc0633b9d'
 
   option "with-boost",    "Enable Boost support"
   # We have build failures with scotch. Help us on this, if you can!
@@ -25,7 +15,7 @@ class TrilinosLibcpp < Formula
   option 'with-release-debug', 'Enable release with debug build'
   option 'with-debug', 'Enable debug build'
 
-  depends_on :mpi => [:cc, :cxx]
+  depends_on :mpi => [:cc]
   depends_on 'cmake' => :build
   depends_on 'boost' => :optional
   depends_on 'scotch' => :optional
