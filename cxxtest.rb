@@ -3,7 +3,7 @@ require 'formula'
 class Cxxtest < Formula
   homepage 'http://cxxtest.com'
   url 'https://github.com/CxxTest/cxxtest/archive/4.3.tar.gz'
-  sha1 'f0ec223e19e153add782200d3a8a9b710a9f8f5a'
+  sha256 '356d0f4810e8eb5c344147a0cca50fc0d84122c286e7644b61cb365c2ee22083'
 
   head 'https://github.com/CxxTest/cxxtest.git', :branch => 'master'
 
